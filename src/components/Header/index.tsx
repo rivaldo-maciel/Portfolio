@@ -1,10 +1,10 @@
-import Menu from '../Menu';
+import MenuIcon from '../MenuIcon';
 import { Container } from './style';
 
 const Header = () => {
   return (
     <Container>
-      <Menu />
+      <MenuIcon />
     </Container>
   );
 }

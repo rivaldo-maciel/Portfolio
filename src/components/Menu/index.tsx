@@ -1,17 +1,23 @@
-
 import { Container } from './style';
-import { useState } from 'react';
+import { useContext } from 'react';
+import menuContext from '../../context/menuContext';
 
 const Menu = () => {
-  const [isActive, setIsActive] = useState(false);
+  const context = useContext(menuContext);
   return (
-    <Container
-      onClick={() => setIsActive(prevState => !prevState)}
-      className={isActive && 'active'}
-    >
-      <div></div>
-      <div></div>
-      <div></div>
+    <Container isActive={context?.isActive}>
+      <ul>
+        {
+          ["Sobre Mim", "Projetos", "Certificações", "Contatos"]
+          .map((link) => (
+            <li key={link}>
+              <a href="">
+                { link }
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </Container>
   )
 }
