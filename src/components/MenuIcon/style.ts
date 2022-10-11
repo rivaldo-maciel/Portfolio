@@ -37,10 +37,12 @@ export const Container = styled.button`
   &.active div:nth-child(1) {
     top: 40%;
     transform: rotate(45deg);
+    background: rgb(53, 234, 180);
   }
 
   &.active div:nth-child(3) {
     bottom: 50%;
     transform: rotate(-45deg);
+    background: rgb(53, 234, 180);
   }
 `

@@ -1,17 +1,30 @@
+import { ThemeProvider } from 'styled-components'
 import './App.css'
 import Header from './components/Header'
 import Menu from './components/Menu'
+import Presentation from './components/Presentation'
 import MenuContext from './context/MenuContext'
 import GlobalStyle from './globalStyles'
 
 function App() {
+  const theme = {
+    colors: {
+      bg: '#1D1D1D',
+      letters: '#fff',
+      green: 'rgb(53, 234, 180)'
+    }
+  }
+
   return (
     <>
-      <MenuContext>
-        <GlobalStyle />
-        <Menu />
-        <Header/>
-      </MenuContext>
+        <ThemeProvider theme={theme}>
+          <MenuContext>
+            <GlobalStyle />
+              <Menu />
+              <Header/>
+              <Presentation />
+          </MenuContext>
+        </ThemeProvider>
     </>
   )
 }

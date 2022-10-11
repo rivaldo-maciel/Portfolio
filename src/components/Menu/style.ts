@@ -8,6 +8,8 @@ export const Container = styled.section<{ isActive: boolean |  undefined }>`
   visibility: hidden;
   align-items: center;
   justify-content: center;
+  transition: .3s;
+  background-color: ${ props => props.theme.colors.bg};
 
   & ul {
     list-style: none;
