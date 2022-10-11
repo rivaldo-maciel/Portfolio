@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Menu from './components/Menu'
 import Presentation from './components/Presentation'
+import Thumb from './components/Thumb'
 import MenuContext from './context/MenuContext'
 import GlobalStyle from './globalStyles'
 
@@ -20,9 +21,12 @@ function App() {
         <ThemeProvider theme={theme}>
           <MenuContext>
             <GlobalStyle />
-              <Menu />
               <Header/>
-              <Presentation />
+              <main>
+                <Menu />
+                <Presentation />
+                <Thumb />
+              </main>
           </MenuContext>
         </ThemeProvider>
     </>

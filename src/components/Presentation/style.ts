@@ -47,6 +47,7 @@ export const Container = styled.section`
     visibility: hidden;
     animation: animate2 4s linear forwards;
     animation-delay: 1.2s;
+    color: #8e8e8e;
   }
 
   @keyframes animate2 {
