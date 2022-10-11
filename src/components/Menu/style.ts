@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.section<{ isActive: boolean |  undefined }>`
-  height: 100vh;
   width: 100%;
   position: absolute;
+  z-index: -1;
   display: flex;
   visibility: hidden;
   align-items: center;
