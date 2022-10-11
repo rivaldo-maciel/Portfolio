@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   color: ${ props => props.theme.colors.letters};
   padding: 1.5rem;
+  margin-top: 4rem;
 
   & h1, h2, h3 {
     margin: 0;
@@ -47,7 +48,7 @@ export const Container = styled.section`
     visibility: hidden;
     animation: animate2 4s linear forwards;
     animation-delay: 1.2s;
-    color: #8e8e8e;
+    color: ${ props => props.theme.colors.gray};
   }
 
   @keyframes animate2 {

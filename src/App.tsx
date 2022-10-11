@@ -1,36 +1,45 @@
-import { ThemeProvider } from 'styled-components'
-import './App.css'
-import Header from './components/Header'
-import Menu from './components/Menu'
-import Presentation from './components/Presentation'
-import Thumb from './components/Thumb'
-import MenuContext from './context/MenuContext'
-import GlobalStyle from './globalStyles'
+import { ThemeProvider } from 'styled-components';
+import './App.css';
+import AboutMe from './components/AboutMe';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Menu from './components/Menu';
+import Presentation from './components/Presentation';
+import SocialMedias from './components/SocialMedias';
+import Thumb from './components/Thumb';
+import MenuContext from './context/MenuContext';
+import SocialMediasContext from './context/SocialMediasContext';
+import GlobalStyle from './globalStyles';
 
 function App() {
   const theme = {
     colors: {
       bg: '#1D1D1D',
       letters: '#fff',
-      green: '#01fe87'
+      green: '#01fe87',
+      gray: '#8e8e8e'
     }
-  }
+  };
 
   return (
     <>
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <SocialMediasContext>
           <MenuContext>
             <GlobalStyle />
-              <Header/>
-              <main>
-                <Menu />
-                <Presentation />
-                <Thumb />
-              </main>
+            <Header />
+            <MainContent>
+              <Menu />
+              <Presentation />
+              <Thumb />
+              <AboutMe />
+              <SocialMedias />
+            </MainContent>
           </MenuContext>
-        </ThemeProvider>
+        </SocialMediasContext>
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

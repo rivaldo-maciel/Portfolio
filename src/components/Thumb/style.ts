@@ -6,6 +6,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
 `
 
 export const Word = styled.span<{ position: { x: string, y: string }, displayOrder: string}>`
