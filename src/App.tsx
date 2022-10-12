@@ -5,6 +5,7 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Menu from './components/Menu';
 import Presentation from './components/Presentation';
+import Skills from './components/Skills';
 import SocialMedias from './components/SocialMedias';
 import Thumb from './components/Thumb';
 import MenuContext from './context/MenuContext';
@@ -17,7 +18,8 @@ function App() {
       bg: '#1D1D1D',
       letters: '#fff',
       green: '#01fe87',
-      gray: '#8e8e8e'
+      gray: '#8e8e8e',
+      gray2: '#2b2b2b'
     }
   };
 
@@ -33,6 +35,7 @@ function App() {
               <Presentation />
               <Thumb />
               <AboutMe />
+              <Skills />
               <SocialMedias />
             </MainContent>
           </MenuContext>

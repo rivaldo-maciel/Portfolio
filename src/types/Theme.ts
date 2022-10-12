@@ -6,7 +6,8 @@ declare module 'styled-components' {
       bg: string,
       letters: string,
       green: string,
-      gray: string
+      gray: string,
+      gray2: string
     };
   }
 }
