@@ -8,7 +8,7 @@ const Menu = () => {
     <Container isActive={context?.isActive}>
       <ul>
         {
-          ["Sobre Mim", "Projetos", "Certificações", "Contatos"]
+          ["About Me", "My Skills", "Projects", "certifications", "contact"]
           .map((link) => (
             <li key={link}>
               <a href="">

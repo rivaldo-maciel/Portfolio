@@ -1,21 +1,37 @@
-import { ReactNode, useContext } from 'react';
-import socialMediaContext from '../../context/socialMediasContext';
+import { useContext } from 'react';
+import menuContext from '../../context/menuContext';
+import AboutMe from '../AboutMe';
+import Menu from '../Menu';
+import Presentation from '../Presentation';
+import Skills from '../Skills';
+import SocialMedias from '../SocialMedias';
+import Thumb from '../Thumb';
 import { Container } from './style';
 
-const MainContent = ({ children }: { children: ReactNode}) => {
-  const context = useContext(socialMediaContext);
+const MainContent = () => {
+  const context = useContext(menuContext);
   return (
-    <Container onScroll={() => {
-      context?.setIsVisible(true)
-      setTimeout(() => {
-        context?.setIsVisible(false);
-      }, 3000)}
-    }>
-      {
-        children
-      }
+    <Container
+      onScroll={() => {
+        context?.setIsActive(true);
+        setTimeout(() => {
+          context?.setIsActive(false);
+        }, 3000);
+      }}
+    >
+      {context?.isActive ? (
+        <Menu />
+      ) : (
+        <>
+          <Presentation />
+          <Thumb />
+          <AboutMe />
+          <Skills />
+        </>
+      )}
+      <SocialMedias />
     </Container>
-  )
-}
+  );
+};
 
 export default MainContent;

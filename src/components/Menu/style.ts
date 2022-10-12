@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.section<{ isActive: boolean |  undefined }>`
   width: 100%;
+  height: 100vh;
   position: absolute;
   z-index: 1;
   display: flex;
-  visibility: hidden;
   align-items: center;
   justify-content: center;
   transition: .3s;
@@ -24,15 +24,5 @@ export const Container = styled.section<{ isActive: boolean |  undefined }>`
 
   & ul li {
     margin-top: 3rem;
-  }
-
-  ${
-    (props) => {
-      if (props.isActive) {
-        return ({
-          visibility: "visible"
-        })
-      }
-    }
   }
 `

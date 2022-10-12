@@ -1,13 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import './App.css';
-import AboutMe from './components/AboutMe';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
-import Menu from './components/Menu';
-import Presentation from './components/Presentation';
-import Skills from './components/Skills';
-import SocialMedias from './components/SocialMedias';
-import Thumb from './components/Thumb';
 import MenuContext from './context/MenuContext';
 import SocialMediasContext from './context/SocialMediasContext';
 import GlobalStyle from './globalStyles';
@@ -30,14 +24,7 @@ function App() {
           <MenuContext>
             <GlobalStyle />
             <Header />
-            <MainContent>
-              <Menu />
-              <Presentation />
-              <Thumb />
-              <AboutMe />
-              <Skills />
-              <SocialMedias />
-            </MainContent>
+            <MainContent />
           </MenuContext>
         </SocialMediasContext>
       </ThemeProvider>
