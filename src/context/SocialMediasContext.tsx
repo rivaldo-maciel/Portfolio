@@ -6,7 +6,7 @@ type props = {
 }
 
 const SocialMediasContext = (props: props) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   return (
     <socialMediasContext.Provider
       value={{ isVisible, setIsVisible }}

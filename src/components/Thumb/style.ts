@@ -5,8 +5,8 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-top: 5.5rem;
   position: relative;
-  margin-top: 2rem;
 `
 
 export const Word = styled.span<{ position: { x: string, y: string }, displayOrder: string}>`
@@ -15,7 +15,8 @@ export const Word = styled.span<{ position: { x: string, y: string }, displayOrd
   font-size: 1.2rem;
   color: ${ props => props.theme.colors.bg};
   animation: animateWord 1s linear forwards;
-  animation-delay: ${ props => props.displayOrder}s;
+  animation-delay: ${ props => Number(props.displayOrder) + 4 }s;
+  animation-duration: 0.1s;
 
   @keyframes animateWord {
     0% {
@@ -110,7 +111,7 @@ export const words = [
     displayOrder: "10"
   },
   {
-    word: "Mongodb",
+    word: "Java",
     position: {
       x: "6",
       y: "-7"
@@ -158,7 +159,7 @@ export const words = [
     displayOrder: "16"
   },
   {
-    word: "Java",
+    word: "Mongodb",
     position: {
       x: "0",
       y: "-3"

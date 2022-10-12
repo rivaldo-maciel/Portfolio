@@ -1,25 +1,28 @@
 import { useContext } from 'react';
 import menuContext from '../../context/menuContext';
+import socialMediasContext from '../../context/socialMediasContext';
 import AboutMe from '../AboutMe';
 import Menu from '../Menu';
 import Presentation from '../Presentation';
+import Projects from '../Projects';
 import Skills from '../Skills';
 import SocialMedias from '../SocialMedias';
 import Thumb from '../Thumb';
 import { Container } from './style';
 
 const MainContent = () => {
-  const context = useContext(menuContext);
+  const context = useContext(socialMediasContext);
+  const contextMenu = useContext(menuContext);
   return (
     <Container
       onScroll={() => {
-        context?.setIsActive(true);
+        context?.setIsVisible(true);
         setTimeout(() => {
-          context?.setIsActive(false);
+          context?.setIsVisible(false);
         }, 3000);
       }}
     >
-      {context?.isActive ? (
+      {contextMenu?.isActive? (
         <Menu />
       ) : (
         <>
@@ -27,9 +30,10 @@ const MainContent = () => {
           <Thumb />
           <AboutMe />
           <Skills />
+          <Projects />
+          <SocialMedias />
         </>
       )}
-      <SocialMedias />
     </Container>
   );
 };

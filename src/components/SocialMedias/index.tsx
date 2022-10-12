@@ -4,11 +4,11 @@ import { AiFillGithub } from 'react-icons/ai';
 import { AiFillMail } from 'react-icons/ai';
 import { useTheme } from 'styled-components';
 import { useContext } from 'react';
-import socialMediaContext from '../../context/socialMediasContext';
+import socialMediasContext from '../../context/socialMediasContext';
 
 const SocialMedias = () => {
   const theme = useTheme();
-  const context = useContext(socialMediaContext);
+  const context = useContext(socialMediasContext);
   return (
     <Container isVisible={context?.isVisible || false}>
       <AiFillLinkedin color={theme.colors.bg} size={40}/>

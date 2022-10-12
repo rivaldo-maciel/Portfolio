@@ -4,7 +4,7 @@ export const Container = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 6rem;
 
   & h1 {
     color: ${props => props.theme.colors.letters};
