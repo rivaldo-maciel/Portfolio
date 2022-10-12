@@ -2,12 +2,13 @@ import { useContext } from 'react';
 import menuContext from '../../context/menuContext';
 import socialMediasContext from '../../context/socialMediasContext';
 import AboutMe from '../AboutMe';
+import Certifications from '../Certifications';
 import Menu from '../Menu';
 import Presentation from '../Presentation';
 import Projects from '../Projects';
 import Skills from '../Skills';
 import SocialMedias from '../SocialMedias';
-import Thumb from '../Thumb';
+import WordsCloud from '../WordsCloud';
 import { Container } from './style';
 
 const MainContent = () => {
@@ -27,10 +28,11 @@ const MainContent = () => {
       ) : (
         <>
           <Presentation />
-          <Thumb />
+          <WordsCloud />
           <AboutMe />
           <Skills />
           <Projects />
+          <Certifications />
           <SocialMedias />
         </>
       )}

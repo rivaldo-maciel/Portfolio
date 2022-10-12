@@ -1,7 +1,7 @@
 import { Container, Word } from './style';
 import { words } from './style';
 
-const Thumb = () => {
+const WordsCloud = () => {
   return (
     <Container>
       {words.map(({ word, position, displayOrder }) => (
@@ -13,4 +13,4 @@ const Thumb = () => {
   );
 };
 
-export default Thumb;
+export default WordsCloud;
