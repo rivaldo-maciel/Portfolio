@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 5.5rem;
+  margin-top: 8.5rem;
   position: relative;
 `
 

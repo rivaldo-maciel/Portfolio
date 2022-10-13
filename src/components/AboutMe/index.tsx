@@ -19,13 +19,13 @@ const AboutMe = () => {
         </svg>
       </div>
       <p>
-        My name is Rivaldo. I'm 24 years old. I currently live in the city of
-        Cruzília-MG. I'm Full Stack Web Developer. I am fascinated by everything
+        My name is Rivaldo. I'm 24 years old. I'm Full Stack Web Developer. I
+        currently live in the city of Cruzília-MG. I am fascinated by everything
         that involves technology. Since I got my first computer in 2009, to this
         day it has become my favorite hobby, whether for gaming, image editing
         or developing personal/study projects. In addition to coding, I like to
-        listen to music musical_note, watch films and series movie_camera and I
-        don't dispense a good conversation with my friends speaking_head!
+        listen to music, watch films and series and I
+        don't dispense a good conversation with my friends!
       </p>
     </Container>
   );

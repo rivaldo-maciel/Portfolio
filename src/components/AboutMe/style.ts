@@ -16,7 +16,8 @@ export const Container = styled.section`
     text-align: left;
     width: 80%;
     align-self: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    font-size: 1.4rem;
   }
 
   .img-content {
