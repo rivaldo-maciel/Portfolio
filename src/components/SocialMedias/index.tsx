@@ -10,12 +10,21 @@ const SocialMedias = () => {
   const theme = useTheme();
   const context = useContext(socialMediasContext);
   return (
-    <Container isVisible={context?.isVisible || false}>
-      <AiFillLinkedin color={theme.colors.bg} size={40}/>
-      <AiFillGithub color={theme.colors.bg} size={40}/>
-      <AiFillMail color={theme.colors.bg} size={40}/>
+    <Container>
+      <a
+        href="https://www.linkedin.com/in/rivaldo-dev-fullstack/"
+        target="blank"
+      >
+        <AiFillLinkedin color={theme.colors.bg} size={40} />
+      </a>
+      <a href="https://github.com/rivaldo-maciel" target="blank">
+        <AiFillGithub color={theme.colors.bg} size={40} />
+      </a>
+      <a href="mailto:rivaldomaciel@hotmail.com">
+        <AiFillMail color={theme.colors.bg} size={40} />
+      </a>
     </Container>
-  )
-}
+  );
+};
 
 export default SocialMedias;

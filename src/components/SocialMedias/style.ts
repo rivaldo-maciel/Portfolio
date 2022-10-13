@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.nav<{ isVisible: boolean}>`
+export const Container = styled.nav`
   position: fixed;
   bottom: 0;
   border-radius: 10px 10px 0 0;
@@ -11,5 +11,4 @@ export const Container = styled.nav<{ isVisible: boolean}>`
   width: 80%;
   background: ${ props => props.theme.colors.green};
   align-self: center;
-  visibility: ${ props => props.isVisible ? "visible" : "hidden"}
 `
