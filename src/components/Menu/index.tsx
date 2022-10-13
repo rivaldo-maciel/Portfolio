@@ -1,25 +1,38 @@
-import { Container } from './style';
 import { useContext } from 'react';
-import menuContext from '../../context/menuContext';
+import menuContext, { Refs } from '../../context/menuContext';
+import { Container } from './style';
 
 const Menu = () => {
   const context = useContext(menuContext);
   return (
-    <Container isActive={context?.isActive}>
+    <Container>
       <ul>
-        {
-          ["About Me", "My Skills", "Projects", "certifications", "contact"]
-          .map((link) => (
-            <li key={link}>
-              <a href="">
-                { link }
-              </a>
-            </li>
-          ))
-        }
+        {[
+          { name: 'About Me', ref: 'aboutMe' },
+          { name: 'My Skills', ref: 'mySkills' },
+          { name: 'Projects', ref: 'projects' },
+          { name: 'Certifications', ref: 'certifications' }
+        ].map(({ name, ref }) => (
+          <li key={name}>
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                const refs = context?.refs;
+                if (refs) {
+                  const currRef = refs[ref as keyof Refs];
+                  currRef.current?.scrollIntoView({ behavior: 'smooth' });
+                  context.setIsActive(false);
+                }
+              }}
+            >
+              {name}
+            </a>
+          </li>
+        ))}
       </ul>
     </Container>
-  )
-}
+  );
+};
 
 export default Menu;

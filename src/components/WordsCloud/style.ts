@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  height: 10rem;
+  height: 6.5rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -11,159 +11,168 @@ export const Container = styled.section`
 
 export const Word = styled.span<{ position: { x: string, y: string }, displayOrder: string}>`
   position: absolute;
-  transform: translate(${props => props.position.x}rem, ${props => props.position.y}rem);
+  top: ${props => props.position.y}rem;
+  right: ${props => props.position.x}rem;
   font-size: 1.2rem;
   color: ${ props => props.theme.colors.bg};
-  animation: animateWord 1s linear forwards;
-  animation-delay: ${ props => Number(props.displayOrder) + 4 }s;
-  animation-duration: 0.1s;
+  animation: animateWord 4s linear forwards;
+  animation-delay: ${ props => Number(props.displayOrder) + 4}s;
 
   @keyframes animateWord {
     0% {
       color: ${ props => props.theme.colors.bg};
     } 100% {
       color: ${ props => props.theme.colors.green};
-      text-shadow: ${ props => props.theme.colors.green} 1px 0 10px;
+      text-shadow: 1px 1px 2px ${ props => props.theme.colors.green};
     }
   }
   }
+
 `
 
 export const words = [
   {
-    word: "React JS",
+    word: "Sequelize",
     position: {
-      x: "-6",
-      y: "-6.5"
+      x: '17',
+      y: '0.2'
     },
-    displayOrder: "1"
+    displayOrder: "14"
   },
   {
     word: "Javascript",
     position: {
-      x: "-2",
-      y: "-8"
+      x: '15',
+      y: '-1.5'
     },
-    displayOrder: "2"
+    displayOrder: "15"
   },
   {
     word: "HTML",
     position: {
-      x: "-9",
-      y: "-5"
+      x: '14',
+      y: '-3'
     },
-    displayOrder: "3"
+    displayOrder: "16"
   },
   {
     word: "CSS",
     position: {
-      x: "-9",
-      y: "-3"
+      x: '14',
+      y: '0.2'
     },
-    displayOrder: "4"
+    displayOrder: "3"
   },
   {
     word: "Typescript",
     position: {
-      x: "-6",
-      y: "-1.5"
+      x: '8',
+      y: '-4'
     },
-    displayOrder: "5"
+    displayOrder: "17"
   },
   {
     word: "API Rest",
     position: {
-      x: "-1.8",
-      y: "0"
+      x: '8.7',
+      y: '-2'
     },
-    displayOrder: "6"
+    displayOrder: "4"
   },
   {
-    word: "Sequelize",
+    word: "React JS",
     position: {
-      x: "2.4",
-      y: "-1.5"
+      x: '8',
+      y: '0'
     },
-    displayOrder: "7"
+    displayOrder: "1"
   },
   {
     word: "Typeorm",
     position: {
-      x: "5",
-      y: "-3"
+      x: '3.5',
+      y: '-2.5'
     },
-    displayOrder: "8"
+    displayOrder: "18"
   },
   {
     word: "Git",
     position: {
-      x: "7",
-      y: "-4"
+      x: '8.5',
+      y: '4.8'
     },
     displayOrder: "9"
   },
   {
     word: "MYSQL",
     position: {
-      x: "8",
-      y: "-5.5"
+      x: '10',
+      y: '3.5'
     },
     displayOrder: "10"
   },
   {
-    word: "Java",
+    word: "Node JS",
     position: {
-      x: "6",
-      y: "-7"
+      x: '10.5',
+      y: '5'
     },
     displayOrder: "11"
   },
   {
     word: "Docker",
     position: {
-      x: "3",
-      y: "-8.5"
+      x: '5.8',
+      y: '3.5'
     },
-    displayOrder: "12"
+    displayOrder: "8"
   },
   {
     word: "Bootstrap",
     position: {
-      x: "0.3",
-      y: "-6.2"
+      x: '2',
+      y: '-1'
     },
-    displayOrder: "13"
+    displayOrder: "5"
   },
   {
     word: "TailwindCSS",
     position: {
-      x: "-3",
-      y: "-4.5"
+      x: '14',
+      y: '2'
     },
-    displayOrder: "14"
+    displayOrder: "13"
   },
   {
     word: "Redux",
     position: {
-      x: "3.5",
-      y: "-4.5"
+      x: '10',
+      y: '1.8'
     },
-    displayOrder: "15"
+    displayOrder: "2"
   },
   {
     word: "Python",
     position: {
-      x: "-5",
-      y: "-3"
+      x: '3.5',
+      y: '0.5'
     },
-    displayOrder: "16"
+    displayOrder: "6"
   },
   {
     word: "Mongodb",
     position: {
-      x: "0",
-      y: "-3"
+      x: '4',
+      y: '2'
     },
-    displayOrder: "17"
+    displayOrder: "7"
+  },
+  {
+    word: "Java",
+    position: {
+      x: '15',
+      y: '3.5'
+    },
+    displayOrder: "12"
   }
 ]

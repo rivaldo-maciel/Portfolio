@@ -11,7 +11,7 @@ function App() {
     colors: {
       bg: '#1D1D1D',
       letters: '#fff',
-      green: 'rgb(29, 229, 99)',
+      green: '#3cff35',
       gray: '#8e8e8e',
       gray2: '#2b2b2b'
     }

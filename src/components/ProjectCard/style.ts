@@ -18,6 +18,10 @@ export const Container = styled.div`
     margin-bottom: 1.2rem;
     margin-top: 1rem;
   }
+
+  & svg {
+    color: ${ props => props.theme.colors.bg};
+  }
 `
 export const ViewButtonsContainer = styled.div`
   display: flex;

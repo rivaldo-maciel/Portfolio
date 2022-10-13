@@ -5,7 +5,12 @@ const WordsCloud = () => {
   return (
     <Container>
       {words.map(({ word, position, displayOrder }) => (
-        <Word key={word} position={position} displayOrder={displayOrder}>
+        <Word
+          className="word"
+          key={word}
+          position={position}
+          displayOrder={displayOrder}
+        >
           {word}
         </Word>
       ))}

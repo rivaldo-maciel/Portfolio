@@ -4,7 +4,7 @@ export const Container = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 6rem;
+  margin-top: 9.5rem;
 
   & h1 {
     color: ${props => props.theme.colors.letters};
@@ -19,10 +19,24 @@ export const Container = styled.section`
     margin-top: 3rem;
   }
 
+  .img-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+  }
+
   & img {
     width: 50%;
     border-radius: 50%;
-    align-self: center;
     margin-top: 2rem;
+  }
+
+  & svg {
+    width: 22rem;
+    position: absolute;
+    z-index: -1;
+    top: -2.4rem;
+    right: 2rem;
   }
 `

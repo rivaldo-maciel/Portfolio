@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  margin-top: 2rem;
+  
   & h1 {
     color: ${ props => props.theme.colors.letters};
     text-align: center;

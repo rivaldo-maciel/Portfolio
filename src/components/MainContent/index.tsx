@@ -13,7 +13,8 @@ import { Container } from './style';
 
 const MainContent = () => {
   const context = useContext(socialMediasContext);
-  const contextMenu = useContext(menuContext);
+  const menuCtx = useContext(menuContext);
+
   return (
     <Container
       onScroll={() => {
@@ -23,19 +24,16 @@ const MainContent = () => {
         }, 3000);
       }}
     >
-      {contextMenu?.isActive? (
-        <Menu />
-      ) : (
-        <>
-          <Presentation />
-          <WordsCloud />
-          <AboutMe />
-          <Skills />
-          <Projects />
-          <Certifications />
-          <SocialMedias />
-        </>
-      )}
+      {
+        menuCtx?.isActive && <Menu />
+      }
+      <Presentation />
+      <WordsCloud />
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <Certifications />
+      <SocialMedias />
     </Container>
   );
 };

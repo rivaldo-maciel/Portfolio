@@ -1,5 +1,5 @@
 import menuContext from './menuContext';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
 
 type props = {
   children: ReactNode;
@@ -7,9 +7,20 @@ type props = {
 
 const MenuContext = (props: props) => {
   const [isActive, setIsActive] = useState(false);
+  const aboutMeRef = useRef<null | HTMLElement>(null);
+  const mySkillsRef = useRef<null | HTMLElement>(null);
+  const projectsRef = useRef<null | HTMLElement>(null);
+  const certificationsRef = useRef<null | HTMLElement>(null);
+
+  const refs = {
+    aboutMe: aboutMeRef,
+    mySkills: mySkillsRef,
+    projects: projectsRef,
+    certifications: certificationsRef
+  }
   return (
     <menuContext.Provider
-      value={{ isActive, setIsActive }}
+      value={{ isActive, setIsActive, refs }}
     >
       {
         props.children
