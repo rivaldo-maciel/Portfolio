@@ -4,20 +4,17 @@ import { Devices } from '../../types/Devices';
 export const Container = styled.section<{ device: Devices }>`
   color: ${ props => props.theme.colors.letters};
   padding: 1.5rem;
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  margin-top: 4rem;
 
   @media ${ props => props.device.tablet } {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 25rem;
   }
 
   @media ${ props => props.device.laptop } {
-    margin-top: 0;
-    height: 84vh;
+    margin-top: 11rem;
 
     & button:hover {
       color: ${ props => props.theme.colors.letters };
@@ -90,6 +87,7 @@ export const Container = styled.section<{ device: Devices }>`
   }
 
   & .name-container {
-    width: 60rem;
+    width: 40rem;
+    height: 15rem;
   }
 `

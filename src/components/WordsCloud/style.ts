@@ -2,20 +2,20 @@ import styled from 'styled-components';
 import { Devices } from '../../types/Devices';
 
 export const Container = styled.section<{ device: Devices }>`
+  align-self: center;
   height: 12rem;
-  width: 24rem;
+  width: 25rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 4rem;
   position: relative;
-  align-self: center;
   animation animateCloud 4s linear forwards;
   transform: scale(0);
   animation-delay: 5s;
 
-  @media ${ props => props.device.tablet } {
+  @media ${ props => props.device.laptop } {
     margin-right: 10rem;
+    align-self: auto;
   }
 
   @keyframes animateCloud {

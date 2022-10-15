@@ -4,8 +4,8 @@ import { Devices } from '../../types/Devices';
 export const Container = styled.button<{ device: Devices }>`
   border: none;
   background-color: transparent;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   margin-right: 1rem;
   position: relative;
 
@@ -14,7 +14,7 @@ export const Container = styled.button<{ device: Devices }>`
   }
 
   & div {
-    height: .3rem;
+    height: .2rem;
     width: 100%;
     background-color: #fff;
     position: absolute;
@@ -26,7 +26,7 @@ export const Container = styled.button<{ device: Devices }>`
   }
 
   & div:nth-child(2) {
-    top: 1rem; 
+    top: 0.8rem; 
     transition: .35s ease-in-out
   }
 
