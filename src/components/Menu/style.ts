@@ -9,5 +9,5 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   transition: .3s;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/background-image.jpg");;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("background-image.jpg");;
 `
