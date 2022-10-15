@@ -14,12 +14,12 @@ export const Container = styled.div`
 
   & h3 {
     font-size: 1rem;
-    color: ${ props => props.theme.colors.green};
+    color: ${ props => props.theme.colors.yellow};
     text-align: center;
   }
 
   & svg {
     margin-top: 0.5rem;
-    color: ${ props => props.theme.colors.green};
+    color: ${ props => props.theme.colors.yellow};
   }
 `

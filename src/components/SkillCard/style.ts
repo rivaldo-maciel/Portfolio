@@ -8,10 +8,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   transition: 1s;
+  cursor: pointer;
 
   & svg {
-    color: ${ props => props.theme.colors.green};
-    filter: drop-shadow(0 0 0.35rem ${ props => props.theme.colors.green});
+    color: ${ props => props.theme.colors.yellow};
+    filter: drop-shadow(0 0 0.35rem ${ props => props.theme.colors.yellow});
   }
 
   .hidden {
@@ -20,6 +21,6 @@ export const Container = styled.div`
 
   & h2 {
     font-size: 1.2rem;
-    color: ${ props => props.theme.colors.green};
+    color: ${ props => props.theme.colors.yellow};
   }
 `

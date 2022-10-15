@@ -1,23 +1,28 @@
 import styled from 'styled-components';
+import { Devices } from '../../types/Devices';
 
-export const Container = styled.section`
-  width: 100%;
+export const Container = styled.section<{ device: Devices }>`
+  width: 40rem;
   display: flex;
   flex-direction: column;
   margin-top: 9.5rem;
+  align-self: center;
+
+  @media ${ props => props.device.laptop } {
+    height: 100vh;
+  }
 
   & h1 {
-    color: ${props => props.theme.colors.letters};
+    color: ${ props => props.theme.colors.letters };
     text-align: center;
   }
 
   & p {
     color: ${props => props.theme.colors.gray};
-    text-align: left;
-    width: 80%;
     align-self: center;
     margin-top: 4rem;
     font-size: 1.4rem;
+    text-align: center;
   }
 
   .img-content {
@@ -28,7 +33,7 @@ export const Container = styled.section`
   }
 
   & img {
-    width: 50%;
+    width: 12rem;
     border-radius: 50%;
     margin-top: 2rem;
   }
@@ -37,7 +42,6 @@ export const Container = styled.section`
     width: 22rem;
     position: absolute;
     z-index: -1;
-    top: -2.4rem;
     right: 2rem;
   }
 `

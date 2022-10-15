@@ -9,20 +9,5 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   transition: .3s;
-  background-color: ${ props => props.theme.colors.bg};
-
-  & ul {
-    list-style: none;
-    height: 80%;
-  }
-
-  & ul a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: #fff;
-  }
-
-  & ul li {
-    margin-top: 3rem;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/background-image.jpg");;
 `

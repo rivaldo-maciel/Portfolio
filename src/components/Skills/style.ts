@@ -16,6 +16,7 @@ import { SiTailwindcss } from 'react-icons/si';
 import { SiRedux } from 'react-icons/si';
 import { BiGitBranch } from 'react-icons/bi';
 import { SiJest } from 'react-icons/si';
+import { Devices } from '../../types/Devices';
 
 export const icons = [
   { icon: FaReact, name: 'React Js' },
@@ -37,16 +38,42 @@ export const icons = [
   { icon: BiGitBranch, name: 'Git'}
 ];
 
-export const Container = styled.section`
+export const Container = styled.section<{ device: Devices }>`
   & .skills-container {
     display: grid;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1rem));
+    grid-template-columns: repeat(auto-fit, minmax(6rem, auto));
   }
 
   & h1 {
     text-align: center;
     color: ${(props) => props.theme.colors.letters};
+  }
+
+  @media ${ props => props.device.tablet } {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    & .skills-container {
+      width: 90%;
+    }
+  }
+
+  @media ${ props => props.device.laptop } {
+    margin-top: 0;
+    height: 100vh;
+
+    & .skills-container {
+      margin-top: 5rem;
+      width: 80%;
+    }
+
+    & h1 {
+      margin-top: 2rem;
+    }
   }
 `;

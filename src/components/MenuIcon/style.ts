@@ -1,12 +1,17 @@
 import styled from 'styled-components';
+import { Devices } from '../../types/Devices';
 
-export const Container = styled.button`
+export const Container = styled.button<{ device: Devices }>`
   border: none;
   background-color: transparent;
   height: 2.2rem;
   width: 2.2rem;
   margin-right: 1rem;
   position: relative;
+
+  @media ${ props => props.device.tablet } {
+    display: none;
+  }
 
   & div {
     height: .3rem;
@@ -37,12 +42,12 @@ export const Container = styled.button`
   &.active div:nth-child(1) {
     top: 40%;
     transform: rotate(45deg);
-    background: ${ props => props.theme.colors.green};
+    background: ${ props => props.theme.colors.yellow};
   }
 
   &.active div:nth-child(3) {
     bottom: 50%;
     transform: rotate(-45deg);
-    background: ${ props => props.theme.colors.green};
+    background: ${ props => props.theme.colors.yellow};
   }
 `

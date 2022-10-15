@@ -1,3 +1,4 @@
+import { DetailedHTMLProps, HTMLAttributes, RefObject } from 'react';
 import 'styled-components';
 
 declare module 'styled-components' {
@@ -5,7 +6,7 @@ declare module 'styled-components' {
     colors: {
       bg: string,
       letters: string,
-      green: string,
+      yellow: string,
       gray: string,
       gray2: string
     };

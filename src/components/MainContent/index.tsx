@@ -8,7 +8,6 @@ import Presentation from '../Presentation';
 import Projects from '../Projects';
 import Skills from '../Skills';
 import SocialMedias from '../SocialMedias';
-import WordsCloud from '../WordsCloud';
 import { Container } from './style';
 
 const MainContent = () => {
@@ -28,9 +27,8 @@ const MainContent = () => {
         menuCtx?.isActive && <Menu />
       }
       <Presentation />
-      <WordsCloud />
       <AboutMe />
-      <Skills />
+      <Skills/>
       <Projects />
       <Certifications />
       <SocialMedias />

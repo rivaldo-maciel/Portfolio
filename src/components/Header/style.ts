@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background-color: ${ props => props.theme.colors.bg };
+  background-color: transparent;
   height: 4rem;
   display: flex;
   align-items: center;

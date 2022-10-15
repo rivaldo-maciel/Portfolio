@@ -30,5 +30,5 @@ export const ViewButtonsContainer = styled.div`
   border-radius: 0 0 .3rem .3rem;
   height: 3rem;
   width: 100%;
-  background: ${ props => props.theme.colors.green};
+  background: ${ props => props.theme.colors.yellow};
 `

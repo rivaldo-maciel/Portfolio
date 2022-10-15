@@ -7,6 +7,7 @@ type menuContextType = {
 }
 
 export type Refs = {
+  home: React.MutableRefObject<null | HTMLElement>,
   aboutMe: React.MutableRefObject<null | HTMLElement>,
   mySkills: React.MutableRefObject<null | HTMLElement>,
   projects: React.MutableRefObject<null | HTMLElement>,
