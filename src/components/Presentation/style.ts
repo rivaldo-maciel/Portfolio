@@ -14,7 +14,7 @@ export const Container = styled.section<{ device: Devices }>`
   }
 
   @media ${ props => props.device.laptop } {
-    margin-top: 11rem;
+    margin-top: 13.5rem;
 
     & button:hover {
       color: ${ props => props.theme.colors.letters };
