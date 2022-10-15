@@ -17,9 +17,10 @@ const AboutMe = () => {
         currently live in the city of Cruzília-MG. I am fascinated by everything
         that involves technology. Since I got my first computer in 2009, to this
         day it has become my favorite hobby, whether for gaming, image editing
-        or developing personal/study projects. In addition to coding, I like to
-        listen to music, watch films and series and I
-        don't dispense a good conversation with my friends!
+        or developing personal/study projects. I build complete web applications
+        (Front End, Back End and Database) with responsive design and end-to-end
+        testing. My goal is to enter the job market as a Web Developer and be
+        able to contribute with all the knowledge I acquired during my training.
       </p>
     </Container>
   );

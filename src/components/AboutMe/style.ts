@@ -7,9 +7,18 @@ export const Container = styled.section<{ device: Devices }>`
   flex-direction: column;
   margin-top: 9.5rem;
   align-self: center;
+  width: 90%;
 
   @media ${ props => props.device.laptop } {
-    height: 100vh;
+    width: 45rem;
+  
+    & p {
+      color: ${props => props.theme.colors.gray};
+      align-self: center;
+      margin-top: 4rem;
+      font-size: 1.4rem;
+      text-align: center;
+    }
   }
 
   & h1 {

@@ -18,6 +18,10 @@ export const Container = styled.section<{ device: Devices }>`
   @media ${ props => props.device.laptop } {
     margin-top: 0;
     height: 84vh;
+
+    & button:hover {
+      color: ${ props => props.theme.colors.letters };
+    }
   }
 
   & h1, h2, h3 {
@@ -76,11 +80,12 @@ export const Container = styled.section<{ device: Devices }>`
   & button {
     border: none;
     background: ${ props => props.theme.colors.yellow };
+    color: ${ props => props.theme.colors.bg };
     font-weight: bold;
     height: 2rem;
     width: 8rem;
     margin-top: .6rem;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
   }
 
