@@ -39,6 +39,8 @@ export const icons = [
 ];
 
 export const Container = styled.section<{ device: Devices }>`
+  height: 100vh;
+
   & .skills-container {
     display: grid;
     justify-content: center;

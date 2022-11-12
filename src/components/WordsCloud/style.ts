@@ -2,20 +2,19 @@ import styled from 'styled-components';
 import { Devices } from '../../types/Devices';
 
 export const Container = styled.section<{ device: Devices }>`
-  align-self: center;
-  height: 12rem;
+  height: 18rem;
   width: 25rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  animation animateCloud 4s linear forwards;
+  animation: animateCloud 4s linear forwards;
   transform: scale(0);
   animation-delay: 5s;
+  align-self: center;
 
   @media ${ props => props.device.laptop } {
     margin-right: 10rem;
-    align-self: auto;
   }
 
   @keyframes animateCloud {
@@ -38,6 +37,12 @@ export const Word = styled.span<{ position: { x: string, y: string }, displayOrd
   transform: scale(1.8);
   color: ${ props => props.dark ? '#9e7414' : props.theme.colors.yellow};
   animation-delay: ${ props => Number(props.displayOrder) + 4}s;
+  transition: 1s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(2);
+  }
 
   @keyframes animateWord {
     0% {
@@ -46,8 +51,6 @@ export const Word = styled.span<{ position: { x: string, y: string }, displayOrd
       color: ${ props => props.dark ? '#c18c07' : props.theme.colors.yellow};
     }
   }
-  }
-
 `
 
 export const words = [

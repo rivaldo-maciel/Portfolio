@@ -3,23 +3,28 @@ import { Devices } from '../../types/Devices';
 
 export const Container = styled.section<{ device: Devices }>`
   color: ${ props => props.theme.colors.letters};
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin-top: 4rem;
 
   @media ${ props => props.device.tablet } {
     flex-direction: row;
   }
 
   @media ${ props => props.device.laptop } {
-    margin-top: 13.5rem;
 
-    & button:hover {
+    & a:hover {
       color: ${ props => props.theme.colors.letters };
     }
   }
+
+  @media ${ props => props.device.mobileL } {
+    height: 100vh;
+
+    & .name-container {
+    align-self: center;
+  }
+  }
+
 
   & h1, h2, h3 {
     margin: 0;
@@ -61,33 +66,37 @@ export const Container = styled.section<{ device: Devices }>`
   & h2 {
     visibility: hidden;
     animation: animate2 4s linear forwards;
-    animation-delay: 1.2s;
+    animation-delay: 0.5s;
     color: ${ props => props.theme.colors.gray};
   }
 
   @keyframes animate2 {
     0% {
-      transform: translatex(80vh);
+      transform: translatex(-80vh);
     } 100% {
       visibility: visible;
       transform: translatex(0);
     }
   }
 
-  & button {
-    border: none;
+  & a {
     background: ${ props => props.theme.colors.yellow };
     color: ${ props => props.theme.colors.bg };
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 2rem;
     width: 8rem;
     margin-top: .6rem;
     border-radius: 2px;
     cursor: pointer;
+    text-decoration: none;
   }
 
   & .name-container {
     width: 40rem;
-    height: 15rem;
+    height: 18rem;
+    padding: 1.3rem;
   }
 `

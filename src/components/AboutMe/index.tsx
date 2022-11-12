@@ -8,11 +8,11 @@ const AboutMe = () => {
   const context = useContext(menuContext);
   return (
     <Container ref={context?.refs.aboutMe} device={device}>
-      <h1>About Me</h1>
-      <div className="img-content">
+      <h1 data-aos="fade-up">About Me</h1>
+      <div data-aos="fade-up" className="img-content">
         <img src={profileImage} alt="profile image" />
       </div>
-      <p>
+      <p data-aos="fade-up">
         My name is Rivaldo. I'm 24 years old. I'm Full Stack Web Developer. I
         currently live in the city of Cruzília-MG. I am fascinated by everything
         that involves technology. Since I got my first computer in 2009, to this

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import menuContext from '../../context/menuContext';
 import socialMediasContext from '../../context/socialMediasContext';
 import AboutMe from '../AboutMe';
@@ -9,10 +9,16 @@ import Projects from '../Projects';
 import Skills from '../Skills';
 import SocialMedias from '../SocialMedias';
 import { Container } from './style';
+import Aos from 'aos';
+import '../../../node_modules/aos/dist/aos.css';
 
 const MainContent = () => {
   const context = useContext(socialMediasContext);
   const menuCtx = useContext(menuContext);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   return (
     <Container

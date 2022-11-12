@@ -12,7 +12,7 @@ const Presentation = () => {
         <h3>hello! I'm</h3>
         <h1 data-text="Rivaldo">Rivaldo</h1>
         <h2>Full Stack Web Developer</h2>
-        <button type="button">Download CV</button>
+        <a href="/curriculo.pdf" download="curriculo.pdf">Download CV</a>
       </div>
       <WordsCloud />
     </Container>

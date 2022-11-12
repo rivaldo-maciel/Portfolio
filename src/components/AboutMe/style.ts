@@ -21,6 +21,10 @@ export const Container = styled.section<{ device: Devices }>`
     }
   }
 
+  @media ${ props => props.device.mobileL } {
+    height: 100vh;
+  }
+
   & h1 {
     color: ${ props => props.theme.colors.letters };
     text-align: center;

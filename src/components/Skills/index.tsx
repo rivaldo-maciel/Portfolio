@@ -10,8 +10,8 @@ const Skills = () => {
 
   return (
     <Container device={device} ref={context?.refs.mySkills}>
-      <h1>My Skills</h1>
-      <div className="skills-container">
+      <h1 data-aos="fade-up">My Skills</h1>
+      <div className="skills-container" data-aos="fade-up">
         {icons.map(({ icon, name }) => (
           <SkillCard Icon={icon} name={name} key={name} />
         ))}

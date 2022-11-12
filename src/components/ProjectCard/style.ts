@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ src: string }>`
   text-align: center;
   
   .card-container {
     border-radius: .3rem;
     height: 20rem;
     width: 100%;
-    background: ${ props => props.theme.colors.gray2};
+    background-image: url(${ props => props.src });
+    background-size: cover;
     display: flex;
     align-items: flex-end;
   }
@@ -21,6 +22,7 @@ export const Container = styled.div`
 
   & svg {
     color: ${ props => props.theme.colors.bg};
+    cursor: pointer;
   }
 `
 export const ViewButtonsContainer = styled.div`

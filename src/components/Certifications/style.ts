@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { Devices } from '../../types/Devices';
 
-export const Container = styled.section`
-  margin-top: 2rem;
+export const Container = styled.section<{ device: Devices }>`
+  margin-top: 5rem;
   margin-bottom: 4rem;
 
   & h1 {
@@ -9,7 +10,12 @@ export const Container = styled.section`
     text-align: center;
   }
 
+  @media ${ props => props.device.mobileL } {
+    height: 100vh;
+  }
+
   .certifications-container {
+    margin-top: 5rem;
     display: grid;
     justify-content: center;
     gap: 1rem;
