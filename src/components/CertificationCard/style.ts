@@ -6,6 +6,11 @@ export const Container = styled.div`
   align-items: center;
   margin-top: 2rem;
 
+  & img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
 
   & img {
     width: 20rem;

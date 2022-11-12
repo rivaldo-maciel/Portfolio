@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import menuContext from '../../context/menuContext';
 import CertificationCard from '../CertificationCard';
 import { Container } from './style';
-import { certifications } from './style';
+import { certifications } from './data';
 import { device } from '../../breakpoints';
 
 const Certifications = () => {
