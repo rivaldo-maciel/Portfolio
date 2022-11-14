@@ -39,7 +39,6 @@ export const icons = [
 ];
 
 export const Container = styled.section<{ device: Devices }>`
-  height: 100vh;
 
   & .skills-container {
     display: grid;
@@ -52,6 +51,7 @@ export const Container = styled.section<{ device: Devices }>`
   & h1 {
     text-align: center;
     color: ${(props) => props.theme.colors.letters};
+    margin-top: 4rem;
   }
 
   @media ${ props => props.device.tablet } {

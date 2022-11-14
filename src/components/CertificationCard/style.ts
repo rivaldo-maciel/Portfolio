@@ -1,30 +1,18 @@
 import styled from 'styled-components';
+import { Devices } from '../../types/Devices';
 
-export const Container = styled.div`
+export const Container = styled.div<{ device: Devices }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
-
-  & img:hover {
-    transform: scale(1.1);
-    z-index: 1;
-  }
-
 
   & img {
-    width: 20rem;
-    position: relative;
+    width: 100%;
   }
 
-  & h3 {
-    font-size: 1rem;
-    color: ${ props => props.theme.colors.yellow};
-    text-align: center;
+  @media ${ props => props.device.desktop } {
+    & img {
+    width: 40rem;
   }
-
-  & svg {
-    margin-top: 0.5rem;
-    color: ${ props => props.theme.colors.yellow};
   }
 `
