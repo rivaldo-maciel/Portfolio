@@ -13,7 +13,12 @@ export const Container = styled.div`
 
   & svg {
     color: ${ props => props.theme.colors.yellow};
-    filter: drop-shadow(0 0 0.35rem ${ props => props.theme.colors.yellow});
+  }
+
+  &:hover {
+    svg {
+      filter: drop-shadow(0 0 0.35rem ${ props => props.theme.colors.yellow});
+    }
   }
 
   .hidden {
