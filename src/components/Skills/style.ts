@@ -71,7 +71,7 @@ export const Container = styled.section<{ device: Devices }>`
 
     & .skills-container {
       margin-top: 5rem;
-      width: 80%;
+      width: 60%;
     }
   }
 `;
