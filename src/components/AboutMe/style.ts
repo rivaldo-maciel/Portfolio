@@ -5,7 +5,6 @@ export const Container = styled.section<{ device: Devices }>`
   width: 40rem;
   display: flex;
   flex-direction: column;
-  margin-top: 9.5rem;
   align-self: center;
   width: 90%;
 

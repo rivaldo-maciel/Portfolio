@@ -5,6 +5,7 @@ export const Container = styled.section<{ device: Devices }>`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-bottom: 4rem;
 
   & h1 {
     color: ${(props) => props.theme.colors.letters};

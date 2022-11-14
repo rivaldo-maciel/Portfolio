@@ -18,6 +18,7 @@ const Projects = () => {
             isDeployed={isDeployed}
             deployLink={deployLink}
             repoLink={repoLink}
+            key={deployLink}
           />
         ))}
       </div>
