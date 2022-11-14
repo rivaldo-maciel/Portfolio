@@ -27,6 +27,7 @@ export const Container = styled.section<{ device: Devices }>`
   & h1 {
     color: ${ props => props.theme.colors.letters };
     text-align: center;
+    margin-top: 4rem;
   }
 
   & p {
