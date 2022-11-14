@@ -73,9 +73,5 @@ export const Container = styled.section<{ device: Devices }>`
       margin-top: 5rem;
       width: 80%;
     }
-
-    & h1 {
-      margin-top: 2rem;
-    }
   }
 `;
