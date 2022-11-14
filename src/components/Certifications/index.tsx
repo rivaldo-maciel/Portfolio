@@ -28,9 +28,9 @@ const Certifications = () => {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       >
-        {certifications.map(({ src, title, link }) => (
+        {certifications.map(({ src, link }) => (
           <SwiperSlide>
-            <CertificationCard key={src} src={src} title={title} link={link} />
+            <CertificationCard key={src} src={src} link={link} />
           </SwiperSlide>
         ))}
       </Swiper>

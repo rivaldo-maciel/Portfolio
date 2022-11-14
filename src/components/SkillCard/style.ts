@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 6rem;
   background: ${ props => props.theme.colors.gray2};
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 1s;
@@ -20,7 +21,10 @@ export const Container = styled.div`
   }
 
   & h2 {
-    font-size: 1.2rem;
-    color: ${ props => props.theme.colors.yellow};
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    color: ${ props => props.theme.colors.yellow };
   }
 `
