@@ -2,17 +2,18 @@ import { device } from '../../breakpoints';
 import { Container } from './style';
 
 type props = {
-  src: string,
-  title: string,
-  link: string
-}
+  src: string;
+  link: string;
+};
 
-const CertificationCard = ({ src }: props) => {
+const CertificationCard = ({ src, link }: props) => {
   return (
     <Container device={device}>
-      <img src={src} alt="certification image" />
+      <a href={link} target="blank">
+        <img src={src} alt="certification image" />
+      </a>
     </Container>
-  )
-}
+  );
+};
 
 export default CertificationCard;
